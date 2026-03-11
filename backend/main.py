@@ -12,6 +12,9 @@ class DemandInput(BaseModel):
     stock_levels: int
     lead_times: int
 
+@app.get("/")
+def home():
+    return {"message": "Supply Chain Demand Prediction API"}
 
 @app.post("/predict-demand")
 def predict(data: DemandInput):
