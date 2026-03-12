@@ -72,7 +72,8 @@ elif page == "Demand Prediction":
 
             try:
                 response = requests.post(
-                    "http://127.0.0.1:8000/predict-demand",
+                    # "http://127.0.0.1:8000/predict-demand",
+                    "https://supply-chain-ml-system-production.up.railway.app/predict-demand",
                     json={
                         "price": price,
                         "availability": availability,
